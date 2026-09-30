@@ -1,0 +1,375 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fdfbf7;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #c5a880;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #c5a880;
+}
+
+header nav .btn-nav {
+    background-color: #c5a880;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+header nav .btn-nav:hover {
+    background-color: #b3956d;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(247, 243, 237, 0.8), rgba(247, 243, 237, 0.8)), url('/images/hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #c5a880;
+}
+
+/* Sobre / Profissional */
+.sobre {
+    padding: 80px 8%;
+    background-color: #fff;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sobre-foto img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #c5a880;
+}
+
+.sobre-texto h2 {
+    color: #c5a880;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.sobre-texto h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Servicos */
+.servicos {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servico-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid #c5a880;
+}
+
+.servico-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 80px 8%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio p {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    padding: 15px;
+    background: #fff;
+    text-align: left;
+}
+
+.portfolio-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/*portfolio foto 3 e 4*/
+.portfolio-item-unico {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mesma alturadas fotos duplas para manter a simetria */
+.foto-unica-box {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.foto-unica-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.foto-unica-box:hover img {
+    transform: scale(1.03);
+}
+
+/* Agendamento */
+.agendamento {
+    padding: 80px 8%;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.agendamento h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.agendamento p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #c5a880;
+    background-color: #fff;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #1ebd58;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2c2c2c;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Basica */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-foto img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ateliê Simone</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header / Navegação -->
+    <header>
+      <div class="logo">Ateliê Simone Nobre</div>
+      <nav>
+        <a href="#">Início</a>
+        <a href="#sobre">A Profissional</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#agendamento" class="btn-nav">Agendar Horário</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Realce a beleza do seu olhar</h1>
+      <p>
+        Design personalizado e técnicas avançadas para harmonizar o seu rosto.
+      </p>
+      <a href="#agendamento" class="btn-principal">Fazer Agendamento</a>
+    </section>
+
+    <!-- Apresentação da Profissional -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-container">
+        <div class="sobre-foto">
+          <img th:src="@{/images/Foto12.jpeg}" alt="Designer de Sobrancelhas" />
+        </div>
+        <div class="sobre-texto">
+          <h2>A Profissional</h2>
+          <h3>Olá, sou a Simone Nobre Pestana.</h3>
+          <p>
+            Designer de sobrancelhas e micropigmentadora e esteticista. Cursada
+            nas técnicas de fios e técnicas de espumados, sobrancelhas, nas
+            técnicas fios realistas e shadow. Master em micropigmentação.
+            Especialista em visagismo e reconstrução de sobrancelhas com mais de
+            10 anos de experiência no mercado de beleza. Minha missão é devolver
+            a autoestima de mulheres através de um olhar marcante, natural e
+            personalizado. Professora de designer de sobrancelhas, ministro
+            curso em meu próprio espaço. Busco sempre atender com excelência os
+            meus clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descrição dos Serviços -->
+    <section id="servicos" class="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <h3>Design Personalizado</h3>
+          <p>
+            Mapeamento facial completo respeitando a simetria do seu rosto para
+            alinhar os fios perfeitamente.
+          </p>
+        </div>
+        <div class="servico-card">
+          <h3>Design com Henna</h3>
+          <p>
+            Coloração natural ideal para preencher falhas e destacar o desenho
+            das sobrancelhas com efeito sombreado.
+          </p>
+        </div>
+        <div class="servico-card">
+          <h3>Brow Lamination</h3>
+          <p>
+            Técnica moderna que alinha os fios naturais para cima,
+            proporcionando volume, preenchimento e um visual editorial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio de Clientes -->
+    <section id="portfolio" class="portfolio">
+      <h2>Resultados Reais</h2>
+      <p>
+        Veja a transformação incrível no olhar das nossas clientes queridas.
+      </p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img
+            th:src="@{/images/Foto-de-Henna.jpg}"
+            alt="Resultado Design com Henna"
+          />
+
+          <div class="portfolio-info">
+            <h4>Design com Henna</h4>
+            <p>Definição e preenchimento natural de falhas.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img
+            th:src="@{/images/Foto-de-Braw-Lamination.jpg}"
+            alt="Resultado Brow Lamination"
+          />
+          <div class="portfolio-info">
+            <h4>Brow Lamination</h4>
+            <p>Alinhamento, volume e fios encorpados.</p>
+          </div>
+        </div>
+
+        <!---- clientes 3 e 4-->
+        <div class="portfolio-item-unico">
+          <div class="foto-unica-box">
+            <img
+              th:src="@{/images/Foto-de-Braw-Lamination2.jpg}"
+              alt="Resultado Design Clássico"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h4>Designer de Sobrancelhas clássico</h4>
+            <p>
+              Limpeza e alinhamento de fios focado em destacar a naturalidade e
+              leveza do olhar.
+            </p>
+          </div>
+        </div>
+        <div class="portfolio-item-unico">
+          <div class="foto-unica-box">
+            <img
+              th:src="@{/images/Foto-de-Hidragloss.jpg}"
+              alt="Hidragloss Labial"
+            />S
+          </div>
+          <div class="portfolio-info">
+            <h4>Hidragloss Labial</h4>
+            <p>
+              O procedimento é confortável, rápido e o resultado de lábios
+              saudável, renovados e naturalmente destacados!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulário de Agendamento -->
+    <section id="agendamento" class="agendamento">
+      <h2>Agende seu Momento</h2>
+      <p>
+        Escolha o serviço, a data e a hora ideal. Você será direcionada ao nosso
+        WhatsApp para confirmar.
+      </p>
+
+      <form id="formAgendamento" onsubmit="enviarWhatsApp(event)">
+        <div class="form-group">
+          <label for="nome">Seu Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            required
+            placeholder="Digite seu nome completo"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="servico">Selecione o Serviço:</label>
+          <select id="servico" required>
+            <option value="" disabled selected>Escolha uma opção...</option>
+            <option value="Design Personalizado">Design Personalizado</option>
+            <option value="Design com Henna">Design com Henna</option>
+            <option value="Brow Lamination">Brow Lamination</option>
+            <option value="Micropigmentação">Micropigmentação</option>
+            <option value="Hidragloss Labial">Hidragloss Labial</option>
+            <option value="Limpeza de Pele">Limpeza de Pele</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data Desejada:</label>
+            <input type="date" id="data" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Horário:</label>
+            <input type="time" id="hora" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Confirmar pelo WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Ateliê Simone. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script de Integração com o Banco + WhatsApp -->
+    <script>
+      function enviarWhatsApp(event) {
+        event.preventDefault();
+
+        // INSIRA O SEU NÚMERO DO WHATSAPP AQUI (Com código do país e DDD, apenas números)
+        const whatsAppNumber = "5511966160823";
+
+        const nome = document.getElementById("nome").value;
+        const servico = document.getElementById("servico").value;
+        const dataInput = document.getElementById("data").value;
+        const hora = document.getElementById("hora").value;
+
+        // Prepara os dados para enviar para o Java salvar no MySQL
+        const dadosAgendamento = {
+          nome: nome,
+          servico: servico,
+          dataAgendamento: dataInput,
+          horaAgendamento: hora, // Formato HH:mm:ss esperado pelo LocalTime
+        };
+
+        // 1. Envia os dados para salvar no Banco de Dados
+        fetch("/api/agendamentos", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dadosAgendamento),
+        })
+          .then((response) => {
+            if (response.ok) {
+              // 2. Se salvou no banco com sucesso, gera o link e abre o WhatsApp
+              const dataFormatada = dataInput.split("-").reverse().join("/");
+              const mensagem =
+                "*Olá! Gostaria de realizar um agendamento:\n\n" +
+                "*Nome:* " +
+                nome +
+                "\n" +
+                "*Serviço:* " +
+                servico +
+                "\n" +
+                "*Data:* " +
+                dataFormatada +
+                "\n" +
+                "*Horário:* " +
+                hora;
+
+              const url =
+                "https://wa.me/" +
+                whatsAppNumber +
+                "?text=" +
+                encodeURIComponent(mensagem);
+
+              window.open(url, "_blank");
+            } else {
+              alert("Ocorreu um erro ao salvar o agendamento no sistema.");
+            }
+          })
+          .catch((error) => {
+            console.error("Erro:", error);
+            alert("Erro de conexão com o servidor Java.");
+          });
+      }
+    </script>
+  </body>
+</html>
